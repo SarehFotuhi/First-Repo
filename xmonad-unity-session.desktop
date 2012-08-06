@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=XMonad/GNOME                                                                                                                                                                                                                                                             
+Comment=Tiling window manager
+TryExec=/usr/bin/gnome-session
+Exec=gnome-session --session=xmonad
+Type=Session
