@@ -1,0 +1,42 @@
+include COPYING.BSD
+include COPYING.LESSER
+include CONTRIBUTING.md
+include MANIFEST.in
+include README.rst
+include setup.cfg.template
+include setup.py
+include setupegg.py
+include zmqversion.py
+include tox.ini
+include .travis.yml
+
+graft docs
+prune docs/build
+prune docs/gh-pages
+
+graft bundled/uuid
+exclude bundled/uuid/Makefile*
+include bundled/zeromq/COPYING
+graft bundled/zeromq/include
+graft bundled/zeromq/src
+include bundled/zeromq/builds/msvc/platform.hpp
+exclude bundled/zeromq/src/Makefile*
+exclude bundled/zeromq/src/platform.hpp
+
+graft buildutils
+graft examples
+graft zmq
+graft perf
+
+exclude setup.cfg
+exclude zmq/libzmq*
+# exclude docs/_static
+# exclude docs/_templates
+
+global-exclude *.so
+global-exclude *.pyd
+global-exclude *.pyc
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude .mailmap
+

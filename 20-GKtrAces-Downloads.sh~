@@ -1,0 +1,6 @@
+#! /bin/sh
+sudo apt-get install gsutil
+gsutil ls gs://clusterdata-2011-1/
+gsutil cp -R gs://clusterdata-2011-1/  ~/traces
+
+
